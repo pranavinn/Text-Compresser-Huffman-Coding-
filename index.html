@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Compression Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Text Compression Tool</h1>
+    <div id="compression-tool">
+        <textarea id="input-text" placeholder="Enter text here..."></textarea>
+        <button onclick="compressText()">Compress</button>
+        <textarea id="output-text" placeholder="Compressed text will appear here..." readonly></textarea>
+        <button onclick="decompressText()">Decompress</button>
+        <textarea id="decompressed-text" placeholder="Decompressed text will appear here..." readonly></textarea>
+        <button onclick="resetFields()">Reset</button>
+        <textarea id="huffman-codes" style="display:none;"></textarea>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
