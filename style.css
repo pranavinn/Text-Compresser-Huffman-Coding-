@@ -4,11 +4,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #071911;
 }
 
 h1 {
     text-align: center;
+    color: #978383;
 }
 
 #compression-tool {

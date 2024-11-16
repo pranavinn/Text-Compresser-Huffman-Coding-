@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Compression Tool</title>
+    <title>TEXT COMPRESSION TOOL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Text Compression Tool</h1>
-    <div id="compression-tool">
-        <textarea id="input-text" placeholder="Enter text here..."></textarea>
-        <button onclick="compressText()">Compress</button>
-        <textarea id="output-text" placeholder="Compressed text will appear here..." readonly></textarea>
-        <button onclick="decompressText()">Decompress</button>
-        <textarea id="decompressed-text" placeholder="Decompressed text will appear here..." readonly></textarea>
-        <button onclick="resetFields()">Reset</button>
-        <textarea id="huffman-codes" style="display:none;"></textarea>
+    <h1 style="position: absolute; top: 20px; left: 20px; color: white; font-size: 2rem; font-weight: bold;">TEXT COMPRESSION TOOL</h1>
+    
+    <p style="position: absolute; top: 80px; left: 20px; color: rgb(222, 246, 222); font-size: 1rem; font-weight: normal;">
+        A simple tool to <br>
+        <span style="color: #4CAF50; font-family: 'Courier New', Courier, monospace; font-weight: bold;">compress</span> and
+        <span style="color: #FF5733; font-family: 'Times New Roman', Times, serif; font-weight: bold;">decompress</span> 
+        text using Huffman coding.
+    </p>
 
+    <p style="position: absolute; top: 160px; left: 20px; color: #FFD700; font-size: 1rem; font-weight: bold;">
+        What is <span style="color: #00FFFF; font-family: 'Courier New', Courier, monospace;">Huffman Coding?</span><br>
+        <span style="color: white; font-weight: normal;">
+            Huffman Coding is a widely used algorithm for 
+            <span style="color: #32CD32; font-weight: bold;">lossless data compression</span>. It is based on the frequency of characters in a dataset and generates 
+            <span style="color: #FFA07A; font-weight: bold;">variable-length codes</span> for input characters, with shorter codes assigned to more frequent characters. This ensures efficient encoding, reducing the total size of the compressed data.
+        </span>
+    </p>
+
+    <div id="compression-tool" style="position: absolute; top: 280px; left: 20px; display: flex; gap: 20px; justify-content: center; align-items: flex-start; width: 100%;">
+        <div>
+            <textarea id="input-text" placeholder="Enter text here..." style="width: 300px; height: 150px; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            <button onclick="compressText()" style="margin-top: 10px; padding: 10px; width: 100%; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Compress</button>
+        </div>
+        <div>
+            <textarea id="output-text" placeholder="Compressed text will appear here..." readonly style="width: 300px; height: 150px; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            <button onclick="decompressText()" style="margin-top: 10px; padding: 10px; width: 100%; font-size: 16px; background-color: #FF5733; color: white; border: none; border-radius: 5px; cursor: pointer;">Decompress</button>
+        </div>
+        <div>
+            <textarea id="decompressed-text" placeholder="Decompressed text will appear here..." readonly style="width: 300px; height: 150px; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            <button onclick="resetFields()" style="margin-top: 10px; padding: 10px; width: 100%; font-size: 16px; background-color: #FFD700; color: black; border: none; border-radius: 5px; cursor: pointer;">Reset</button>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
